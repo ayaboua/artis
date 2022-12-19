@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="refresh" content="15" >
+    <link rel="stylesheet" href="C:\Users\AYA\Desktop\artiso\artiso.css">
+    <title>artiso</title>
+</head>
+<body>
+<header>
+    <div class="left-section">
+        <a href="https://www.w3schools.com" ><img class="logo-image" src="images\Facebook post - 1 (7).svg"></a>
+    
+    </div>
+   
+</header>
+<main>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images\worker-looking-camera-holding-roller (1).jpg"  style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images\plumber-making-phone-gesture (3).jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img_mountains_wide.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+    
+        <div class="point" style="text-align:center " >
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div> 
+   <!--
+     <div class="icons">
+        <div class="icon">
+          <a href=""><img   class="svg" src="C:\Users\AYA\Desktop\Frame 3.svg"> </a>
+        </div>
+         <div class="icon">
+          <a href=""><img  class="svg" src="C:\Users\AYA\Desktop\Frame 3 (1).svg"></a>
+         </div>
+        <div class="icon">
+         <a href=""><img  class="svg" src="C:\Users\AYA\Desktop\Frame 3 (2).svg"></a>
+        </div>
+         <div class="icon">
+          <a href=""><img  class="svg" src="C:\Users\AYA\Desktop\Frame 3 (3).svg"></a>
+        </div>
+      </div>
+    -->
+  </main>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+</main>
+
+<div class="jobs">
+  
+  <div class="painter"><a><img class="job"src="images\Frame 6.png" alt=""></a>
+  <div><span class="sp">Paintre</span></div>
+</div>
+  <div class="plumber"><a><img class="job"src="images\Frame 6 (1).png" alt=""></a>
+  <div><span class="sp">Plombier</span></div>
+  </div>
+  <div class="elect"><a><img class="job"src="images\Frame 7.png" alt=""></a>
+  <div><span class="sp">Electricien</span></div>
+  </div>
+  <div class="carpenter"><a><img class="job"src="images\Frame 8.png" alt=""></a>
+  <div><span class="sp">Menuisier</span></div> 
+  </div>
+  <div class="carpenter"><a><img class="job"src="images\Frame 6 (2).png" alt=""></a>
+    <div><span class="sp">Maçon</span></div> 
+    </div>
+    <div class="carpenter"><a><img class="job"src="images\Frame 6 (2).png" alt=""></a>
+      <div><span class="sp">Maçon</span></div> 
+      </div>
+      <div class="carpenter"><a><img class="job"src="images\Frame 6 (2).png" alt=""></a>
+        <div><span class="sp">Maçon</span></div> 
+        </div>
+</div>
+<footer>
+  <div class="recherche">
+<a ><img  class="fix" src="images\Facebook post - 2 1.png" alt=""></a>
+<span style="margin-left: -10px;">Recherche<span>
+  </div>
+  <div class="annoncer">
+<a><img  class="fix" src="images\Frame 4.png" alt=""></a>
+<span style="margin-left: -10px;">Annoncer</span>
+  </div>
+  <div class="profile">
+<a><img class="fix" src="images\Frame 5.png" alt=""></a>
+<span>Profile</span>
+  </div>
+</footer>
+
+
+</body>
+</html>
